@@ -1,0 +1,16 @@
+{
+    "index": {
+        "title": "Action Tarpit"
+    },
+    "field": {
+        "action": {
+            "label": "Action"
+        },
+        "tries": {
+            "label": "Retries"
+        },
+        "block_until": {
+            "label": "Block until"
+        }
+    }
+}

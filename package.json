@@ -1,0 +1,70 @@
+{
+    "name": "bedrock-login-vue",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Vue component library for bedrock",
+    "keywords": [
+        "bedrock"
+    ],
+    "author": "dev@mexion.com",
+    "license": "",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yormy/bedrock-login-vue.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yormy/bedrock-login-vue/issues"
+    },
+    "homepage": "https://github.com/yormy/bedrock-login-vue#readme",
+    "main": "lib/index.js",
+    "module": "lib/index.esm.js",
+    "scripts": {
+        "build": "rollup -c",
+        "lint": "eslint --ext .js,.vue ./src"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.12",
+        "cssnano": "^5.1.13",
+        "dompurify": "^2.4.0",
+        "regenerator-runtime": "^0.13.9",
+        "rollup-plugin-postcss": "^4.0.2",
+        "vue": "^2.6.12",
+        "vue-i18n": "^8.24.4",
+        "vue-template-compiler": "^2.6.12",
+        "bedrock-core-vue": "file:../bedrock-core-vue",
+        "bedrock-ui-vue": "file:../bedrock-ui-vue"
+    },
+    "peerDependencies": {
+        "vue": "^2.6.12",
+        "vue-class-component": "^7.2.6",
+        "vue-property-decorator": "^9.1.2",
+        "axios": "^0.27"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.3",
+        "@babel/eslint-parser": "^7.14.3",
+        "@babel/plugin-proposal-class-properties": "^7.13.0",
+        "@rollup/plugin-alias": "^3.1.9",
+        "@rollup/plugin-commonjs": "^19.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^13.0.0",
+        "@typescript-eslint/eslint-plugin": "^4.24.0",
+        "@typescript-eslint/parser": "^4.24.0",
+        "eslint": "^7.26.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-import": "^2.23.2",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-vue": "^7.9.0",
+        "eslint-webpack-plugin": "^2.5.4",
+        "rollup": "^2.48.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-typescript2": "^0.30.0",
+        "rollup-plugin-vue": "^5.1.9",
+        "tslib": "^2.2.0",
+        "typescript": "^4.2.4",
+        "vue": "^2.6.12",
+        "vue-template-compiler": "^2.6.12"
+    }
+}

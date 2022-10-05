@@ -1,0 +1,41 @@
+{
+    "title": "",
+    "subtitle": "",
+    "description": "",
+    "index": {
+        "title": "Marketing Snippits"
+    },
+    "edit": {
+        "title": "Marketing Snippit"
+    },
+    "show": {
+        "title": "Marketing Snippit"
+    },
+    "create": {
+        "title": "Marketing Snippit",
+        "subtitle": "",
+        "description": ""
+    },
+    "field": {
+        "title": {
+            "label": "title",
+            "hint": "The catchy headline of this promotional piece"
+        },
+        "content": {
+            "label": "Content",
+            "hint": "More details"
+        },
+        "active_at": {
+            "label": "Active from",
+            "hint": "The date and time this will be activated"
+        },
+        "expires_at": {
+            "label": "Active till",
+            "hint": "The date and time this will stop"
+        },
+        "active_from_till": {
+            "label": "Active from-until",
+            "content": "Active from {active_at} until {expires_at}"
+        }
+    }
+}

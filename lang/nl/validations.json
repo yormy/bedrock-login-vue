@@ -1,0 +1,37 @@
+{
+    "agreed": "Je moet nog even akkoord geven",
+    "alpha": "{_field_} mag alleen letters bevatten",
+    "alpha_dash": "{_field_} mag alleen letters cijfers of een min of laag streeptje bevatten",
+    "alpha_num": "{_field_} mag alleen letters of cijfers bevatten",
+    "alpha_spaces": "{_field_} mag alleen letters en spaties bevatten",
+    "between": "{_field_} moet zijn tussen {min} en {max}",
+    "confirmed": "{_field_} bevestiging komt niet overeen",
+    "digits": "{_field_} moet precies {length} cijfers bevatten",
+    "dimensions": "{_field_} moet {width} pixels breed en {height} pixels hoog zijn",
+    "email": "{_field_} moet een geldig email adres zijn",
+    "excluded": "{_field_} is geen geldige input",
+    "ext": "{_field_} is geen geldige file",
+    "image": "{_field_} moet een plaatje bevatten",
+    "integer": "{_field_} moet een geheel getal zijn",
+    "length": "{_field_} moet {length} tekens lang zijn",
+    "max": "{_field_} mag niet groter zijn dan {length} tekens",
+    "max_value": "{_field_} moet kleiner of gelijk zijn aan {max}",
+    "mimes": "{_field_} is geen geaccepteerd file type",
+    "min": "{_field_} moet minimaal {length} tekens bevatten",
+    "min_value": "{_field_} moet groter of gelijk zijn aan {min}",
+    "numeric": "{_field_} mag alleen cijfers bevatten",
+    "oneOf": "{_field_} is geen geaccepteerde waarde",
+    "regex": "{_field_} is geen goedgekeurde waarde",
+    "required": "{_field_} is verplicht",
+    "required_if": "{_field_} is verplicht",
+    "size": "{_field_} moet kleiner zijn dan {size}KB",
+    "strong-password": "{_field_} moet minimaal 8 tekens zijn met kleine en grote letters getal en symbool (!@#$%^&*)",
+    "custom": {
+        "fielename-heere": {
+            "required": "vul dit maar in"
+        }
+    },
+    "phone": {
+        "invalid": "Vul een bestaand telefoonnummer in"
+    }
+}

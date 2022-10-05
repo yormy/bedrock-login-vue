@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:vue/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module",
+        "parser": "babel-eslint"
+    },
+    "plugins": [
+        "vue",
+        "prettier"
+    ],
+    "rules": {
+        "operator-linebreak": "off",
+        "no-ignore": "off",
+        "vue/require-default-prop": "off",
+        "vue/attributes-order": "off",
+        "vue/require-prop-types": "off",
+        "vue/max-attributes-per-line": "off",
+        "vue/html-self-closing": "off",
+        "vue/order-in-components": "off",
+        "no-unused-vars": "off",
+        "func-names": "off"
+    },
+    "globals": {
+        "_": false,
+        "$": false,
+        "Vue": false,
+        "FormData": false,
+        "location": false,
+        "@config": false,
+        "APP_ENVIRONMENT": false
+    }
+}

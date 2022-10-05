@@ -1,0 +1,15 @@
+{
+    "index": {
+        "title": "Blacklisted IPs",
+        "description": "These IPs are completely blocked from accessing the platform"
+    },
+    "create": {
+        "title": "Blacklist an IP",
+        "description": "Block this IP address from access"
+    },
+    "field": {
+        "blacklisted_by": {
+            "label": "Blacklisted By"
+        }
+    }
+}

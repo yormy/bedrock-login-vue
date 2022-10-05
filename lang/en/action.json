@@ -1,0 +1,22 @@
+{
+    "activate": "Activate",
+    "add": "Add",
+    "close": "Close",
+    "copy": "Copy",
+    "delete": "Delete",
+    "edit": "Edit",
+    "ok": "OK",
+    "search": "Search",
+    "select": "Select",
+    "send": "Send",
+    "view": "View",
+    "export": "Export",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "back": "Back",
+    "save": "Save",
+    "update": "Update",
+    "apply": "Apply",
+    "___more": "... more",
+    "loading___": "Loading ..."
+}
