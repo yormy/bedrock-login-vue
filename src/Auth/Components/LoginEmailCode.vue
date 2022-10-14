@@ -1,13 +1,13 @@
 <template>
     <div>
         <y-title
-            :subtitle="$t('auth.login_email_code.subtitle')"
-            :title="$t('auth.login_email_code.title')"
+            :subtitle="$t('bedrock_login::auth.login_email_code.subtitle')"
+            :title="$t('bedrock_login::auth.login_email_code.title')"
         ></y-title>
 
         <y-input-code
-            :hint-text="$t('auth.login_email_code.hint')"
-            :label="$t('auth.login_email_code.label')"
+            :hint-text="$t('bedrock_login::auth.login_email_code.hint')"
+            :label="$t('bedrock_login::auth.login_email_code.label')"
             fieldId="1"
             fieldName="code"
             v-on="$listeners"
@@ -19,8 +19,8 @@
             <y-check-box
                 v-if="allowTrustIp"
                 v-model="trustIp"
-                :label="$t('auth.login.field.whitelist_ip.label')"
-                :modal-description="$t('auth.login.field.whitelist_ip.description')"
+                :label="$t('bedrock_login::auth.login.field.whitelist_ip.label')"
+                :modal-description="$t('bedrock_login::auth.login.field.whitelist_ip.description')"
                 field-id="3"
                 field-name="whitelist_ip"
                 styling="text-small is-greyed"
@@ -30,8 +30,8 @@
             <y-check-box
                 v-if="allowTrustBrowser"
                 v-model="trustBrowser"
-                :label="$t('auth.login.field.whitelist_browser.label')"
-                :modal-description="$t('auth.login.field.whitelist_browser.description')"
+                :label="$t('bedrock_login::auth.login.field.whitelist_browser.label')"
+                :modal-description="$t('bedrock_login::auth.login.field.whitelist_browser.description')"
                 field-id="4"
                 field-name="whitelist_browser"
                 styling="text-small is-greyed"
@@ -45,10 +45,10 @@
         </div>
 
         <div class="flex justify-between">
-            <y-button-primary :label="$t('auth.action.verify')" @click="$emit('verify')">
+            <y-button-primary :label="$t('bedrock_login::auth.action.verify')" @click="$emit('verify')">
             </y-button-primary>
             <a class="text-small is-greyed" @click="$emit('back')">{{
-                    $t('auth.action.login')
+                    $t('bedrock_login::auth.action.login')
                 }}</a>
         </div>
 

@@ -1,31 +1,12 @@
 <template>
 <div>
-    <y-title :title="$t('auth.login.title')"></y-title>
-
+    <y-title :title="$t('bedrock_login::auth.login.title')"></y-title>
+===
     {{ form.data }}
     <y-login-wait v-if="isLoginWait">
     </y-login-wait>
 
     <input v-model="form.data.firstname" name="'firstname'" type="hidden"/>
-
-    <y-login-email-code
-        v-if="isEmailCode"
-        :allow-trust-browser="allowTrustBrowser"
-        :allow-trust-ip="allowTrustIp"
-        :api-message="state.emailCodeError"
-        :hint="$t('auth.login_email_code.hint')"
-        :label="$t('auth.login_email_code.label')"
-        :subtitle="$t('auth.login_email_code.subtitle')"
-        :title="$t('auth.login_email_code.title')"
-        :trust-browser.sync="form.data.trust_browser"
-        :trust-ip.sync="form.data.trust_ip"
-        @back="onToLogin"
-        @change="onCodeChange"
-        @complete="onCodeComplete"
-        @enter="onCodeEnter"
-        @verify="onLoginHandler"
-    >
-    </y-login-email-code>
 
     <div v-if="!state.screen" class="flex flex-col">
         <ValidationObserver ref="validationObserver" v-slot="{ handleSubmit }">
@@ -33,10 +14,10 @@
                 <y-input-text
                     v-model="form.data.loginname"
                     :api-errors="form.apiErrors"
-                    :hint-text="$t('auth.field.loginname.hint')"
-                    :label="$t('auth.field.loginname.label')"
-                    :label-help-description="$t('auth.field.loginname.description')"
-                    :placeholder="$t('auth.field.loginname.placeholder')"
+                    :hint-text="$t('bedrock_login::auth.field.loginname.hint')"
+                    :label="$t('bedrock_login::auth.field.loginname.label')"
+                    :label-help-description="$t('bedrock_login::auth.field.loginname.description')"
+                    :placeholder="$t('bedrock_login::auth.field.loginname.placeholder')"
                     :rules="'required|min:5'"
                     field-id="loginname"
                     field-name="loginname"
@@ -46,11 +27,11 @@
                 <y-input-text
                     v-model="form.data.password"
                     :api-errors="form.apiErrors"
-                    :hint-text="$t('auth.field.password.hint')"
+                    :hint-text="$t('bedrock_login::auth.field.password.hint')"
                     :is-password="true"
-                    :label="$t('auth.field.password.label')"
-                    :label-help-description="$t('auth.field.password.description')"
-                    :placeholder="$t('auth.field.password.placeholder')"
+                    :label="$t('bedrock_login::auth.field.password.label')"
+                    :label-help-description="$t('bedrock_login::auth.field.password.description')"
+                    :placeholder="$t('bedrock_login::auth.field.password.placeholder')"
                     :rules="'required|strong-password'"
                     fieldId="password"
                     fieldName="password"
@@ -60,22 +41,22 @@
                 <div class="flex justify-between">
                     <y-check-box
                         v-model="form.data.remember"
-                        :description="$t('auth.login.field.remember_me.description')"
-                        :label="$t('auth.login.field.remember_me.label')"
+                        :description="$t('bedrock_login::auth.login.field.remember_me.description')"
+                        :label="$t('bedrock_login::auth.login.field.remember_me.label')"
                         field-id="3"
                         field-name="remember"
                         styling="text-small is-greyed"
                     >
                     </y-check-box>
                     <a class="text-small is-greyed" @click="onForgotHandler">{{
-                            $t('auth.action.forgot')
+                            $t('bedrock_login::auth.action.forgot')
                         }}</a>
                 </div>
 
                 <y-alert-text-danger :message="form.messages.error"></y-alert-text-danger>
 
                 <div class="mt-3">
-                    <y-button-primary :label="$t('auth.action.login')"></y-button-primary>
+                    <y-button-primary :label="$t('bedrock_login::auth.action.login')"></y-button-primary>
                 </div>
 
             </form>
@@ -83,6 +64,26 @@
         </ValidationObserver>
 
     </div>
+
+
+    <y-login-email-code
+        v-if="isEmailCode"
+        :allow-trust-browser="allowTrustBrowser"
+        :allow-trust-ip="allowTrustIp"
+        :api-message="state.emailCodeError"
+        :hint="$t('bedrock_login::auth.login_email_code.hint')"
+        :label="$t('bedrock_login::auth.login_email_code.label')"
+        :subtitle="$t('bedrock_login::auth.login_email_code.subtitle')"
+        :title="$t('bedrock_login::auth.login_email_code.title')"
+        :trust-browser.sync="form.data.trust_browser"
+        :trust-ip.sync="form.data.trust_ip"
+        @back="onToLogin"
+        @change="onCodeChange"
+        @complete="onCodeComplete"
+        @enter="onCodeEnter"
+        @verify="onLoginHandler"
+    >
+    </y-login-email-code>
   </div>
 </template>
 

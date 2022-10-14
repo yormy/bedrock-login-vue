@@ -1,6 +1,6 @@
 <template>
     <div>
-        <y-title :title="$t('auth.login_wait.title')"></y-title>
+        <y-title :title="$t('bedrock_login::auth.login_wait.title')"></y-title>
 
         <y-appearing-bullets
             :messages="messages"
@@ -31,25 +31,25 @@ export default {
         return {
             messages: [
                 {
-                    text: this.$t('auth.login_wait.message.line1'),
+                    text: this.$t('bedrock_login::auth.login_wait.message.line1'),
                     loading: false,
                     completed: false,
                     processingMs: 1000,
                 },
                 {
-                    text: this.$t('auth.login_wait.message.line2'),
+                    text: this.$t('bedrock_login::auth.login_wait.message.line2'),
                     loading: false,
                     completed: false,
                     processingMs: 2000,
                 },
                 {
-                    text: this.$t('auth.login_wait.message.line3'),
+                    text: this.$t('bedrock_login::auth.login_wait.message.line3'),
                     loading: false,
                     completed: false,
                     processingMs: 2000,
                 },
                 {
-                    text: this.$t('auth.login_wait.message.line4'),
+                    text: this.$t('bedrock_login::auth.login_wait.message.line4'),
                     loading: false,
                     completed: false,
                     processingMs: 20000,

@@ -1,13 +1,13 @@
 <template>
     <div>
         <y-title
-            :subtitle="$t('auth.login_code.subtitle')"
-            :title="$t('auth.login_code.title')"
+            :subtitle="$t('bedrock_login::auth.login_code.subtitle')"
+            :title="$t('bedrock_login::auth.login_code.title')"
         ></y-title>
 
         <y-input-code
-            :hint-text="$t('auth.login_code.hint')"
-            :label="$t('auth.login_code.label')"
+            :hint-text="$t('bedrock_login::auth.login_code.hint')"
+            :label="$t('bedrock_login::auth.login_code.label')"
             fieldId="1"
             fieldName="code"
             @change="onCodeChange"
@@ -17,7 +17,7 @@
         >
             <!--        :api-errors="args.apiErrors"-->
         </y-input-code>
-        <y-button-primary :label="$t('auth.login_code.button')" class="mt-3"></y-button-primary>
+        <y-button-primary :label="$t('bedrock_login::auth.login_code.button')" class="mt-3"></y-button-primary>
 
     </div>
 </template>
