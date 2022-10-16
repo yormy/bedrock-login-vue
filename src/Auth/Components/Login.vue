@@ -22,7 +22,6 @@
                 :label-help-description="$t('bedrock_login::auth.field.loginname.description')"
                 :placeholder="$t('bedrock_login::auth.field.loginname.placeholder')"
                 :rules="'required|min:5'"
-                field-id="loginname"
                 field-name="loginname"
             >
             </y-input-text>
@@ -36,8 +35,7 @@
                 :label-help-description="$t('bedrock_login::auth.field.password.description')"
                 :placeholder="$t('bedrock_login::auth.field.password.placeholder')"
                 :rules="'required|strong-password'"
-                fieldId="password"
-                fieldName="password"
+                field-name="password"
             >
             </y-input-text>
 
@@ -46,7 +44,6 @@
                     v-model="form.data.remember"
                     :description="$t('bedrock_login::auth.login.field.remember_me.description')"
                     :label="$t('bedrock_login::auth.login.field.remember_me.label')"
-                    field-id="3"
                     field-name="remember"
                     styling="text-small is-greyed"
                 >
