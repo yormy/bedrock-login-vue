@@ -221,15 +221,6 @@ export default {
             return this.route(route);
         },
 
-        // validateForm() {
-        //     // const provider = this.$refs.yinput.$refs.validationrefname;
-        //     // provider.validate();
-        //     this.$refs.validationObserver.validate();
-        //
-        //     return this.$refs.validationObserver.flags.valid;
-        // },
-
-
         onLoginHandler() {
             this.state.screen = SCREEN.LOGINWAIT;
             this.clearErrors();
