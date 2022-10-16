@@ -9,8 +9,9 @@
     <input v-model="form.data.firstname" name="'firstname'" type="hidden"/>
 
     <div v-if="!state.screen" class="flex flex-col">
-        <ValidationObserver ref="validationObserver" v-slot="{ handleSubmit }">
+        <ValidationObserver ref="validationObserver" v-slot="{ invalid, handleSubmit }">
             <form @submit.prevent="handleSubmit(onLoginHandler)">
+
                 <y-input-text
                     v-model="form.data.loginname"
                     :api-errors="form.apiErrors"
@@ -56,7 +57,7 @@
                 <y-alert-text-danger :message="form.messages.error"></y-alert-text-danger>
 
                 <div class="mt-3">
-                    <y-button-primary :label="$t('bedrock_login::auth.action.login')"></y-button-primary>
+                    <y-button-primary :is-disabled="invalid" :label="$t('bedrock_login::auth.action.login')"></y-button-primary>
                 </div>
 
             </form>
@@ -240,7 +241,7 @@ export default {
         onLoginHandler() {
             this.state.screen = SCREEN.LOGINWAIT;
             this.clearErrors();
-            const that = this;
+
             this.$http
                 .post(this.getRoute(), this.form.data)
                 .then((success) => {
