@@ -1,7 +1,7 @@
 <template>
 <div>
     <y-title :title="$t('bedrock_login::auth.login.title')"></y-title>
-===
+=
     {{ form.data }}
     <y-login-wait v-if="isLoginWait">
     </y-login-wait>
@@ -85,13 +85,12 @@ import {
     YInputText,
     YCheckBox,
     YButtonPrimary,
-    YAlertTextDanger
+    YAlertTextDanger,
+    YFormValidated
 
 } from 'bedrock-ui-vue'
 import YLoginWait from './LoginWait.vue'
 import YLoginEmailCode from './LoginEmailCode.vue'
-
-import YFormValidated from './FormValidated.vue'
 
 const SCREEN = {
     LOGINWAIT: 'LOGINWAIT',
