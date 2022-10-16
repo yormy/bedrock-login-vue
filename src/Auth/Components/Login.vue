@@ -9,60 +9,53 @@
     <input v-model="form.data.firstname" name="'firstname'" type="hidden"/>
 
     <div v-if="!state.screen" class="flex flex-col">
-        <ValidationObserver ref="validationObserver" v-slot="{ invalid, handleSubmit }">
-            <form @submit.prevent="handleSubmit(onLoginHandler)">
+        <y-form-validated
+            :errors="form.messages.error"
+            :submit-label="$t('bedrock_login::auth.action.login')"
+            @submit="onLoginHandler"
+        >
+            <y-input-text
+                v-model="form.data.loginname"
+                :api-errors="form.apiErrors"
+                :hint-text="$t('bedrock_login::auth.field.loginname.hint')"
+                :label="$t('bedrock_login::auth.field.loginname.label')"
+                :label-help-description="$t('bedrock_login::auth.field.loginname.description')"
+                :placeholder="$t('bedrock_login::auth.field.loginname.placeholder')"
+                :rules="'required|min:5'"
+                field-id="loginname"
+                field-name="loginname"
+            >
+            </y-input-text>
 
-                <y-input-text
-                    v-model="form.data.loginname"
-                    :api-errors="form.apiErrors"
-                    :hint-text="$t('bedrock_login::auth.field.loginname.hint')"
-                    :label="$t('bedrock_login::auth.field.loginname.label')"
-                    :label-help-description="$t('bedrock_login::auth.field.loginname.description')"
-                    :placeholder="$t('bedrock_login::auth.field.loginname.placeholder')"
-                    :rules="'required|min:5'"
-                    field-id="loginname"
-                    field-name="loginname"
+            <y-input-text
+                v-model="form.data.password"
+                :api-errors="form.apiErrors"
+                :hint-text="$t('bedrock_login::auth.field.password.hint')"
+                :is-password="true"
+                :label="$t('bedrock_login::auth.field.password.label')"
+                :label-help-description="$t('bedrock_login::auth.field.password.description')"
+                :placeholder="$t('bedrock_login::auth.field.password.placeholder')"
+                :rules="'required|strong-password'"
+                fieldId="password"
+                fieldName="password"
+            >
+            </y-input-text>
+
+            <div class="flex justify-between">
+                <y-check-box
+                    v-model="form.data.remember"
+                    :description="$t('bedrock_login::auth.login.field.remember_me.description')"
+                    :label="$t('bedrock_login::auth.login.field.remember_me.label')"
+                    field-id="3"
+                    field-name="remember"
+                    styling="text-small is-greyed"
                 >
-                </y-input-text>
-
-                <y-input-text
-                    v-model="form.data.password"
-                    :api-errors="form.apiErrors"
-                    :hint-text="$t('bedrock_login::auth.field.password.hint')"
-                    :is-password="true"
-                    :label="$t('bedrock_login::auth.field.password.label')"
-                    :label-help-description="$t('bedrock_login::auth.field.password.description')"
-                    :placeholder="$t('bedrock_login::auth.field.password.placeholder')"
-                    :rules="'required|strong-password'"
-                    fieldId="password"
-                    fieldName="password"
-                >
-                </y-input-text>
-
-                <div class="flex justify-between">
-                    <y-check-box
-                        v-model="form.data.remember"
-                        :description="$t('bedrock_login::auth.login.field.remember_me.description')"
-                        :label="$t('bedrock_login::auth.login.field.remember_me.label')"
-                        field-id="3"
-                        field-name="remember"
-                        styling="text-small is-greyed"
-                    >
-                    </y-check-box>
-                    <a class="text-small is-greyed" @click="onForgotHandler">{{
-                            $t('bedrock_login::auth.action.forgot')
-                        }}</a>
-                </div>
-
-                <y-alert-text-danger :message="form.messages.error"></y-alert-text-danger>
-
-                <div class="mt-3">
-                    <y-button-primary :is-disabled="invalid" :label="$t('bedrock_login::auth.action.login')"></y-button-primary>
-                </div>
-
-            </form>
-
-        </ValidationObserver>
+                </y-check-box>
+                <a class="text-small is-greyed" @click="onForgotHandler">{{
+                        $t('bedrock_login::auth.action.forgot')
+                    }}</a>
+            </div>
+        </y-form-validated>
 
     </div>
 
@@ -101,6 +94,8 @@ import {
 import YLoginWait from './LoginWait.vue'
 import YLoginEmailCode from './LoginEmailCode.vue'
 
+import YFormValidated from './FormValidated.vue'
+
 const SCREEN = {
     LOGINWAIT: 'LOGINWAIT',
     EMAILCODE: 'EMAILCODE'
@@ -118,7 +113,8 @@ export default {
         YTitle,
         YAlertTextDanger,
         YLoginWait,
-        YLoginEmailCode
+        YLoginEmailCode,
+        YFormValidated
     },
 
     props: {
