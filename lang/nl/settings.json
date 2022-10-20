@@ -1,9 +1,0 @@
-{
-    "branding": {
-        "site_title": {
-            "label": "Site Title",
-            "hint": "The full name of the site, displayed in the titlebar and emails",
-            "description": "The full name of the site, displayed in the titlebar and emails<br>Used for seo and other purposes "
-        }
-    }
-}
